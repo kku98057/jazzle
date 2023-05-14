@@ -12,6 +12,8 @@
         rel="stylesheet">
     <link rel="stylesheet" href="/asset/css/reset.css">
     <link rel="stylesheet" href="/asset/css/common.css">
+
+
     <title>JAZZLE ENTERPRISE - Location</title>
 </head>
 
@@ -26,7 +28,9 @@
                     <div class="location_title common_title introduce_title">
                         <h3>오시는길</h3>
                     </div>
-
+                    <div class="location_contents">
+                        <div id="map" style="width:100%;height:400px;"></div>
+                    </div>
                 </div>
             </section>
         </main>
@@ -34,6 +38,28 @@
         </footer>
     </div>
     <script src="/asset/js/common.js"></script>
+    <script type="text/javascript"
+        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=6582ff0e92a2a1d85e577fef52e3eae8"></script>
+    <script>
+        // 이미지 지도에서 마커가 표시될 위치입니다 
+        var markerPosition = new kakao.maps.LatLng(37.58109751523496, 126.93409919713456);
+
+        // 이미지 지도에 표시할 마커입니다
+        // 이미지 지도에 표시할 마커는 Object 형태입니다
+        var marker = {
+            position: markerPosition
+        };
+
+        var staticMapContainer = document.getElementById('map'), // 이미지 지도를 표시할 div  
+            staticMapOption = {
+                center: new kakao.maps.LatLng(37.58109751523496, 126.93409919713456), // 이미지 지도의 중심좌표
+                level: 3, // 이미지 지도의 확대 레벨
+                marker: marker // 이미지 지도에 표시할 마커 
+            };
+
+        // 이미지 지도를 생성합니다
+        var staticMap = new kakao.maps.Map(staticMapContainer, staticMapOption);
+    </script>
 </body>
 
 </html>
