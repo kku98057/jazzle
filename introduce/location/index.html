@@ -29,17 +29,19 @@
                         <h3>오시는길</h3>
                     </div>
                     <div class="location_contents">
-                        <div id="map" style="width:100%;height:400px;"></div>
+                        <div id="map" style="width:500px;height:400px;"></div>
                     </div>
                 </div>
             </section>
+            <button type="button" onclick="aa()">qjxms</button>
+            <button type="button" onclick="dd()">qjxms</button>
         </main>
         <footer>
         </footer>
     </div>
     <script src="/asset/js/common.js"></script>
     <script type="text/javascript"
-        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=6582ff0e92a2a1d85e577fef52e3eae8"></script>
+        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a675b529985706066765e9ceae4193da"></script>
     <script>
         // 이미지 지도에서 마커가 표시될 위치입니다 
         var markerPosition = new kakao.maps.LatLng(37.58109751523496, 126.93409919713456);
@@ -50,15 +52,25 @@
             position: markerPosition
         };
 
-        var staticMapContainer = document.getElementById('map'), // 이미지 지도를 표시할 div  
-            staticMapOption = {
+        var mapContainer = document.getElementById('map'), // 이미지 지도를 표시할 div  
+            mapOption = {
                 center: new kakao.maps.LatLng(37.58109751523496, 126.93409919713456), // 이미지 지도의 중심좌표
                 level: 3, // 이미지 지도의 확대 레벨
                 marker: marker // 이미지 지도에 표시할 마커 
             };
 
         // 이미지 지도를 생성합니다
-        var staticMap = new kakao.maps.Map(staticMapContainer, staticMapOption);
+        var map = new kakao.maps.Map(mapContainer, mapOption);
+        function aa() {
+
+            map.relayout();
+        }
+        function aa() {
+
+            var mapContainer = document.getElementById('map');
+            mapContainer.style.width = '650px';
+            mapContainer.style.height = '650px';
+        }
     </script>
 </body>
 
