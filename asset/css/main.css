@@ -5,6 +5,29 @@
   overflow: hidden;
   position: relative;
 }
+.keyvisual_video {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.keyvisual_video:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: #000000;
+  opacity: 0.3;
+}
+.keyvisual_video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .keyvisual_slide {
   width: 100%;
   height: 100%;
@@ -35,7 +58,7 @@
 .keyvisual_title h2 {
   font-weight: 700;
   font-size: var(--font-2x-large);
-  color: var(--color-blue);
+  color: #ffffff;
 }
 .keyvisual_grid {
   margin-top: 30px;
