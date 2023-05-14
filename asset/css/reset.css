@@ -17,7 +17,7 @@ a {
 }
 img {
   width: 100%;
-  position: relative !important;
+  position: relative;
   display: block;
 }
 button {
