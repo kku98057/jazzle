@@ -273,24 +273,24 @@ const filmBannerUl = document.querySelector(".film_banner_ul")
   : "";
 
 introduceBannerUl.innerHTML = `
-<li><a href="/introduce/message/"><span>인사말</span></a></li>
-<li><a href="/introduce/business/"><span>사업분야</span></a></li>
-<li><a href="/introduce/roadmap/"><span>연혁</span></a></li>
-<li><a href="/introduce/certification/"><span>인증서</span></a></li>
-<li><a href="/introduce/facility/"><span>보유설비</span></a></li>
-<li><a href="/introduce/location/"><span>오시는길</span></a></li>
+<li class="introduce_message"><a href="/introduce/message/"><span>인사말</span></a></li>
+<li class="introduce_business"><a href="/introduce/business/"><span>사업분야</span></a></li>
+<li class="introduce_roadmap"><a href="/introduce/roadmap/"><span>연혁</span></a></li>
+<li class="introduce_certification"><a href="/introduce/certification/"><span>인증서</span></a></li>
+<li class="introduce_facility"><a href="/introduce/facility/"><span>보유설비</span></a></li>
+<li class="introduce_location"><a href="/introduce/location/"><span>오시는길</span></a></li>
 `;
 ecoBannerUl.innerHTML = `
-  <li><a href="/eco/pvoh/"><span>PVOH</span></a></li>
-<li><a href="/eco/biope/"><span>BIO PE</span></a></li>
-<li><a href="/eco/pla/"><span>PLA</span></a></li>
-<li><a href="/eco/pcr/"><span>PCR</span></a></li>
-<li><a href="/eco/mdope/"><span>MDOPE</span></a></li>
+<li class="eco_pvoh"><a href="/eco/pvoh/"><span>PVOH</span></a></li>
+<li class="eco_biope"><a href="/eco/biope/"><span>BIO PE</span></a></li>
+<li class="eco_pla"><a href="/eco/pla/"><span>PLA</span></a></li>
+<li class="eco_pcr"><a href="/eco/pcr/"><span>PCR</span></a></li>
+<li class="eco_mdope"><a href="/eco/mdope/"><span>MDOPE</span></a></li>
 `;
 filmBannerUl.innerHTML = `
-   <li><a href="/film/ppfilm/"><span>PP필름</span></a></li>
-                    <li><a href="/film/tpu/"><span>TPU</span></a></li>
-                    <li><a href="/film/pff/"><span>PFF</span></a></li>
+   <li class="film_ppfilm"><a href="/film/ppfilm/"><span>PP필름</span></a></li>
+    <li class="film_tpu"><a href="/film/tpu/"><span>TPU</span></a></li>
+    <li class="film_pff"><a href="/film/pff/"><span>PFF</span></a></li>
 `;
 
 const lang = document.querySelector(".lang");
@@ -303,12 +303,19 @@ const remocon = document.createElement("div");
 remocon.className = "remocon";
 remocon.innerHTML = `
 <div class="remocon_wrap">
-    <div class="remocon_btn top_btn">
-       <span>위로</span>
+<div class="remocon_btn top_btn">
+    <img src="/asset/imgs/icons/arrow.png" alt="top" />
+</div>
+<a href="/cs/" class="remocon_btn contact_btn">
+    <img src="/asset/imgs/icons/contact.png" alt="contact" />
+    <div class="contact_text">
+        <p>무엇이든 물어보세요.</p>
+        <div>
+            <img src="/asset/imgs/icons/warning.png" alt="contact_icon" />
+            <p>월요일 11:00부터 상담 가능</p>
+        </div>
     </div>
-    <a href="/cs/" class="remocon_btn contact_btn">
-        <span>문의하기</span>
-    </a>
+</a>
 </div>
 `;
 wrap.append(remocon);

@@ -8,8 +8,8 @@
   --font-middle2: 22px;
   --font-small: 18px;
 
-  --color-contents-title: #5d5a88;
-  --color-contents-subtext: #9795b5;
+  --color-contents-title: #000000;
+  --color-contents-subtext: #000000;
   --color-card-subText: #8d8ba7;
   --color-qna-bg: #f2f1fa;
 
@@ -20,7 +20,7 @@
 }
 section {
   width: 100%;
-  padding: 150px 0;
+  padding: 75px 0;
 }
 .common_title {
   display: flex;
@@ -113,7 +113,6 @@ header {
   position: absolute;
   overflow: hidden;
   height: 0;
-
   background-color: #ffffff;
   box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0);
 }
@@ -322,6 +321,20 @@ footer {
   align-items: center;
   gap: 64px;
 }
+.sub_keyvisual_wrap ul > li {
+  position: relative;
+  padding-bottom: 5px;
+}
+.sub_keyvisual_wrap ul > li:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #ffffff;
+  display: none;
+}
 .sub_keyvisual_wrap ul span {
   font-weight: 500;
   font-size: 20px;
@@ -329,7 +342,7 @@ footer {
 }
 .remocon {
   z-index: 10;
-  width: 60px;
+  width: auto;
   position: fixed;
   top: 50%;
   transform: translate(0, -50%);
@@ -338,27 +351,58 @@ footer {
 .remocon_wrap {
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   flex-direction: column;
   gap: 10px;
-  border-radius: 50px;
-  padding: 20px 0;
-  background-color: rgba(0, 0, 0, 0.137);
 }
-.remocon_wrap span {
-  font-size: 12px;
-  white-space: nowrap;
-}
+
 .remocon_btn {
-  cursor: pointer;
-  border-radius: 50%;
   width: 50px;
   height: 50px;
-  background-color: rgba(5, 5, 5, 0.212);
   display: flex;
   align-items: center;
   justify-content: center;
+  background: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+}
+.top_btn img {
+  width: 19px;
+}
+.contact_btn {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.3s;
+}
+.contact_btn > img {
+  width: 25px;
+}
+.contact_text {
+  width: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+.contact_text > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact_text p {
+  font-size: 10px;
+}
+.contact_text img {
+  width: 10px;
+}
+.contact_btn:hover {
+  width: 177px;
+}
+.contact_btn:hover .contact_text {
+  width: auto;
+  opacity: 1;
+  transition: opacity 0.3s 0.3s;
 }
 .progress {
   position: fixed;
