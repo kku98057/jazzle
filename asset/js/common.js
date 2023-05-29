@@ -28,17 +28,15 @@ header.innerHTML = `<div class="container">
             </li>
             <li class="nav_list">
                 <div class="nav_category">
-                    <span> 에코사업부 </span>
+                    <span> 에코패키징 </span>
                     <div class="arrow_img">
                         <img src="/asset/imgs/icons/arrow.svg" alt="arrow">
                     </div>
                 </div>
                 <ul class="nav_sub">
                     <li><a href="/eco/pvoh/"><span>PVOH</span></a></li>
-                    <li><a href="/eco/biope/"><span>BIO PE</span></a></li>
-                    <li><a href="/eco/pla/"><span>PLA</span></a></li>
-                    <li><a href="/eco/pcr/"><span>PCR</span></a></li>
-                    <li><a href="/eco/mdope/"><span>MDOPE</span></a></li>
+                    <li><a href="/eco/bio/"><span>재즐 바이오 폴리머</span></a></li>
+                    <li><a href="/eco/bope/"><span>BOPE/MDOPE</span></a></li>
 
                 </ul>
             </li>
@@ -50,9 +48,11 @@ header.innerHTML = `<div class="container">
                     </div>
                 </div>
                 <ul class="nav_sub">
-                    <li><a href="/film/ppfilm/"><span>PP필름</span></a></li>
-                    <li><a href="/film/tpu/"><span>TPU</span></a></li>
-                    <li><a href="/film/pff/"><span>PFF</span></a></li>
+                    <li><a href="/film/opp/"><span>OPP 필름</span></a></li>
+                    <li><a href="/film/valeron/"><span>발레론 필름</span></a></li>
+                    <li><a href="/film/TPU 필름/"><span>TPU 필름</span></a></li>
+                    <li><a href="/film/ppf/"><span>PPF 필름</span></a></li>
+                    <li><a href="/film/pet/"><span>PET 필름</span></a></li>
                 </ul>
             </li>
         </ul>
@@ -135,27 +135,27 @@ footer.innerHTML = `<div class="container">
                 </ul>
             </div>
             <div class="footer_nav">
-                <span>에코사업부</span>
+                <span>에코패키징</span>
                 <ul>
                     <li><a href="/eco/pvoh/"><span>PVOH</span></a></li>
-                    <li><a href="/eco/biope/"><span>BIO PE</span></a></li>
-                    <li><a href="/eco/pla/"><span>PLA</span></a></li>
-                    <li><a href="/eco/pcr/"><span>PCR</span></a></li>
-                    <li><a href="/eco/mdope/"><span>MDOPE</span></a></li>
+                    <li><a href="/eco/bio/"><span>재즐 바이오 폴리머</span></a></li>
+                    <li><a href="/eco/bope/"><span>BOPE/MDOPE</span></a></li>
                 </ul>
             </div>
             <div class="footer_nav">
                 <span>필름사업부</span>
                 <ul>
-                    <li><a href="/film/ppfilm/"><span>PP필름</span></a></li>
-                    <li><a href="/film/tpu/"><span>TPU</span></a></li>
-                    <li><a href="/film/pff/"><span>PFF</span></a></li>
+                    <li><a href="/film/opp/"><span>OPP 필름</span></a></li>
+                    <li><a href="/film/valeron/"><span>발레론 필름</span></a></li>
+                    <li><a href="/film/TPU 필름/"><span>TPU 필름</span></a></li>
+                    <li><a href="/film/ppf/"><span>PPF 필름</span></a></li>
+                    <li><a href="/film/pet/"><span>PET 필름</span></a></li>
                 </ul>
             </div>
             <div class="footer_nav footer_sns">
                 <span>Follow us</span>
                 <ul>
-                    <li>
+                    <li class="sns_facebook">
                         <a href="">
                             <div class="sns_img">
                                 <img src="/asset/imgs/sns/Facebook.png" alt="facebook">
@@ -163,7 +163,7 @@ footer.innerHTML = `<div class="container">
                             <span>Facebook</span>
                         </a>
                     </li>
-                    <li>
+                    <li class="sns_instargram">
                         <a href="">
                             <div class="sns_img">
                                 <img src="/asset/imgs/sns/Instagram.png" alt="Instagram">
@@ -171,15 +171,15 @@ footer.innerHTML = `<div class="container">
                             <span>Instagram</span>
                         </a>
                     </li>
-                    <li>
+                    <li class="sns_linkedIn">
                         <a href="">
                             <div class="sns_img">
-                                <img src="/asset/imgs/sns/LinkedIn.png" alt="aedIn">
+                                <img src="/asset/imgs/sns/LinkedIn.png" alt="linkedIn">
                             </div>
-                            <span>aedIn</span>
+                            <span>LinkedIn</span>
                         </a>
                     </li>
-                    <li>
+                    <li class="sns_twitch">
                         <a href="">
                             <div class="sns_img">
                                 <img src="/asset/imgs/sns/Twitter.png" alt="twitch">
@@ -188,7 +188,7 @@ footer.innerHTML = `<div class="container">
                         </a>
                     </li>
 
-                    <li>
+                    <li class="sns_youTube">
                         <a href="">
                             <div class="sns_img">
                                 <img src="/asset/imgs/sns/YouTube.png" alt="youTube">
@@ -205,21 +205,21 @@ footer.innerHTML = `<div class="container">
 
         <div class="info">
             <div class="info_list">
-                <strong>사업장주소</strong>
+                <span>사업장주소</span>
                 <span>서울 서대문구 백련사길 7(홍은동) 재즐빌딩 3층</span>
             </div>
             <div class="info_list">
-                <strong>대표자</strong>
+                <span>대표자</span>
 
                 <span>이유식</span>
             </div>
             <div class="info_list">
-                <strong>사업자등록번호</strong>
+                <span>사업자등록번호</span>
 
                 <span>105-86-33377</span>
             </div>
             <div class="info_list">
-                <strong>대표안내전화</strong>
+                <span>대표안내전화</span>
                 <span>TEL : 02-322-9592</span>
                 <span>FAX : 02-332-9598</span>
             </div>
@@ -281,16 +281,17 @@ introduceBannerUl.innerHTML = `
 <li class="introduce_location"><a href="/introduce/location/"><span>오시는길</span></a></li>
 `;
 ecoBannerUl.innerHTML = `
-<li class="eco_pvoh"><a href="/eco/pvoh/"><span>PVOH</span></a></li>
-<li class="eco_biope"><a href="/eco/biope/"><span>BIO PE</span></a></li>
-<li class="eco_pla"><a href="/eco/pla/"><span>PLA</span></a></li>
-<li class="eco_pcr"><a href="/eco/pcr/"><span>PCR</span></a></li>
-<li class="eco_mdope"><a href="/eco/mdope/"><span>MDOPE</span></a></li>
+ <li class="eco_pvoh"><a href="/eco/pvoh/"><span>PVOH</span></a></li>
+<li class="eco_bio"><a href="/eco/bio/"><span>재즐 바이오 폴리머</span></a></li>
+<li class="eco_bope"><a href="/eco/bope/"><span>BOPE/MDOPE</span></a></li>
+
 `;
 filmBannerUl.innerHTML = `
-   <li class="film_ppfilm"><a href="/film/ppfilm/"><span>PP필름</span></a></li>
-    <li class="film_tpu"><a href="/film/tpu/"><span>TPU</span></a></li>
-    <li class="film_pff"><a href="/film/pff/"><span>PFF</span></a></li>
+   <li class="film_opp"><a href="/film/opp/"><span>OPP 필름</span></a></li>
+   <li class="film_valeron"><a href="/film/valeron/"><span>발레론 필름</span></a></li>
+    <li class="film_tpu"><a href="/film/tpu/"><span>TPU 필름</span></a></li>
+    <li class="film_ppf"><a href="/film/ppf/"><span>PPF 필름</span></a></li>
+    <li class="film_pet"><a href="/film/pet/"><span>PET 필름</span></a></li>
 `;
 
 const lang = document.querySelector(".lang");

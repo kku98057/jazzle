@@ -89,8 +89,8 @@
   margin-bottom: 5px;
 }
 .business_list .data span {
-  font-weight: 500;
-  font-size: 20px;
+  font-weight: 300;
+  font-size: var(--font-xsmall);
 }
 
 /* 연혁 */
