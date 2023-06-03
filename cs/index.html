@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/asset/css/reset.css">
+    <link rel="stylesheet" href="/asset/css/common.css">
+    <link rel="stylesheet" href="/asset/css/contact.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init('OjZpnSGI_Vjx-MOg8');
+        })();
+    </script>
+
+    <title>JAZZLE ENTERPRISE - 문의하기</title>
+</head>
+
+<body>
+    <div class="wrap">
+        <header></header>
+        <main>
+            <section>
+                <div class="container">
+                    <div class="contact_wrap">
+                        <div class="contact_formwrap">
+                            <form id="contact-form">
+                                <input type="hidden" name="contact_number">
+                                <div class="contact_name">
+                                    <!-- 이름 -->
+                                    <span>회사명(성함)</span>
+                                    <input type="text" name="user_name" placeholder="회사명 또는 성함을 적어주세요." required>
+                                </div>
+                                <!-- 연락처 -->
+                                <div class="contact_phone">
+                                    <span>연락처</span>
+                                    <input type="number" name="user_phone" placeholder="'-'는 제외하고 적어주세요." required>
+                                </div>
+                                <!-- 이메일 -->
+                                <div class="contact_email">
+                                    <span>Email</span>
+                                    <input type="email" name="user_email" placeholder="ex) exaple@gmail.com" required>
+                                </div>
+                                <!-- 선택지 -->
+                                <div class="contact_service">
+                                    <span>이용하려는 서비스(복수선택가능)</span>
+                                    <div class="contact_service_box"></div>
+                                </div>
+                                <!-- etc -->
+                                <div class="contact_etc">
+                                    <span>기타</span>
+                                    <textarea rows="5" cols="5" name="message"
+                                        placeholder="기타문의 사항이 있다면 적어주세요."></textarea>
+                                </div>
+                                <div class="contact_btn">
+                                    <button type="submit"><span>보내기</span></button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="contact_left">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+        </footer>
+    </div>
+    <script>
+        const serviceBox = document.querySelector('.contact_service_box');
+        const serviceList = [{
+            id: 0,
+            value: '체크1'
+        }, {
+            id: 1,
+            value: '체크2'
+        }, {
+            id: 2,
+            value: '체크3'
+        }, {
+            id: 3,
+            value: '체크4'
+        }, {
+            id: 4,
+            value: 'dma'
+        },
+        {
+            id: 5,
+            value: '2342'
+        },
+        {
+            id: 6,
+            value: 'asdf'
+        }]
+        serviceBox.innerHTML = serviceList.map((li) => `<label for="${li.id}" >
+            <input type="checkbox" name="user_service" id="${li.id}" value="${li.value}">
+            <span>${li.value}</span>
+        </label>`).join("")
+    </script>
+    <script type="text/javascript">
+
+        window.onload = function () {
+
+            let isChecked = false;
+            const checkInputs = document.querySelectorAll('.contact_service_box label input');
+            checkInputs.forEach((checkInput) => {
+                checkInput.addEventListener('click', (e) => {
+                    const { checked } = e.target;
+                    if (checked) {
+                        isChecked = true;
+                    } else {
+                        isChecked = false
+                    }
+                })
+            })
+
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                this.contact_number.value = Math.random() * 100000 | 0;
+                if (isChecked) {
+                    emailjs.sendForm('service_wwsdse1', 'template_iita9rc', this)
+                        .then(function (e) {
+                            alert('메일이 전송되었습니다.')
+                        }, function (error) {
+                            alert('메일이 전송에 실패하였습니다.')
+                        });
+                } else {
+                    alert('서비스를 하나이상 선택해주세요.')
+                }
+            });
+
+        }
+    </script>
+    <script src="/asset/js/common.js"></script>
+</body>
+
+</html>
