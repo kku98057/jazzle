@@ -1,5 +1,6 @@
 const wrap = document.querySelector(".wrap");
 const header = document.querySelector("header");
+
 // 헤더
 header.innerHTML = `<div class="container">
 <div class="inHeader">
@@ -13,100 +14,70 @@ header.innerHTML = `<div class="container">
             <li class="nav_list">
                 <div class="nav_category">
                     <span> 회사소개 </span>
-                    <div class="arrow_img">
-                        <img src="/asset/imgs/icons/arrow.svg" alt="arrow">
-                    </div>
+                
                 </div>
-                <ul class="nav_sub">
-                    <li><a href="/introduce/message/"><span>인사말</span></a></li>
-                    <li><a href="/introduce/business/"><span>사업분야</span></a></li>
-                    <li><a href="/introduce/roadmap/"><span>연혁</span></a></li>
-                    <li><a href="/introduce/certification/"><span>인증서</span></a></li>
-                    <li><a href="/introduce/facility/"><span>보유설비</span></a></li>
-                    <li><a href="/introduce/location/"><span>오시는길</span></a></li>
-                </ul>
+                
             </li>
             <li class="nav_list">
                 <div class="nav_category">
                     <span> 에코패키징 </span>
-                    <div class="arrow_img">
-                        <img src="/asset/imgs/icons/arrow.svg" alt="arrow">
-                    </div>
+                  
                 </div>
-                <ul class="nav_sub">
-                    <li><a href="/eco/pvoh/"><span>PVOH</span></a></li>
-                    <li><a href="/eco/bio/"><span>재즐 바이오 폴리머</span></a></li>
-                    <li><a href="/eco/bope/"><span>BOPE/MDOPE</span></a></li>
-
-                </ul>
+                
             </li>
             <li class="nav_list">
                 <div class="nav_category">
                     <span> 산업용필름 </span>
-                    <div class="arrow_img">
-                        <img src="/asset/imgs/icons/arrow.svg" alt="arrow">
-                    </div>
+                  
                 </div>
-                <ul class="nav_sub">
-                    <li><a href="/film/opp/"><span>OPP 필름</span></a></li>
-                    <li><a href="/film/valeron/"><span>발레론 필름</span></a></li>
-                    <li><a href="/film/TPU 필름/"><span>TPU 필름</span></a></li>
-                    <li><a href="/film/ppf/"><span>PPF 필름</span></a></li>
-                    <li><a href="/film/pet/"><span>PET 필름</span></a></li>
-                </ul>
+               
             </li>
         </ul>
         </li>
+        </nav>
         <div class="nav_btns">
-            <a href="/cs/"><span>문의하기</span></a>
-            <div class="lang">
-                <div class="lang_now">
-                    <div class="flag_img">
-                        <img src="/asset/imgs/icons/ko.png" alt="korean">
-                    </div>
-                    <div class="lang_arrow_img">
-                        <img src="/asset/imgs/icons/arrow.svg" alt="arrow">
-                    </div>
-                </div>
-                <ul class="lang_ul">
-                    <li>
-                        <a href="" class="lang_now">
-                            <div class="flag_img">
-                                <img src="/asset/imgs/icons/ko.png" alt="korean">
-                            </div>
-
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" class="lang_now">
-                            <div class="flag_img">
-                                <img src="/asset/imgs/icons/ko.png" alt="korean">
-                            </div>
-
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" class="lang_now">
-                            <div class="flag_img">
-                                <img src="/asset/imgs/icons/ko.png" alt="korean">
-                            </div>
-
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" class="lang_now">
-                            <div class="flag_img">
-                                <img src="/asset/imgs/icons/ko.png" alt="korean">
-                            </div>
-
-                        </a>
-                    </li>
-                </ul>
-            </div>
+            <ul class="lang">
+                <li class=${
+                  document.documentElement.lang === "ko" && "active"
+                }><a href="">KO</a></li>
+                <li  class=${
+                  document.documentElement.lang === "en" && "active"
+                }><a href="">EN</a></li>
+            </ul>
         </div>
-    </nav>
 </div>
 </div>`;
+const div = document.createElement("div");
+div.className = "sub_menu";
+wrap.append(div);
+div.innerHTML = `
+<div class="sub_menu_wrap">
+<ul class="nav_sub">
+    <li class="nav_sub_title"><span>회사소개</span></li>
+    <li><a href="/introduce/message/"><span>인사말</span></a></li>
+    <li><a href="/introduce/roadmap/"><span>연혁</span></a></li>
+    <li><a href="/introduce/business/"><span>사업분야</span></a></li>
+    <li><a href="/introduce/certification/"><span>인증서</span></a></li>
+    <li><a href="/introduce/facility/"><span>보유설비</span></a></li>
+    <li><a href="/introduce/location/"><span>오시는길</span></a></li>
+</ul>
+<ul class="nav_sub">
+    <li class="nav_sub_title"><span>에코패키징</span></li>
+    <li><a href="/eco/pvoh/"><span>PVOH</span></a></li>
+    <li><a href="/eco/bio/"><span>재즐 바이오 폴리머</span></a></li>
+    <li><a href="/eco/bope/"><span>BOPE/MDOPE</span></a></li>
+
+</ul>
+<ul class="nav_sub">
+    <li class="nav_sub_title"><span>산업용필름</span></li>
+    <li><a href="/film/opp/"><span>OPP 필름</span></a></li>
+    <li><a href="/film/valeron/"><span>발레론 필름</span></a></li>
+    <li><a href="/film/tpu/"><span>TPU 필름</span></a></li>
+    <li><a href="/film/ppf/"><span>PPF 필름</span></a></li>
+    <li><a href="/film/pet/"><span>PET 필름</span></a></li>
+</ul>
+</div>`;
+
 // 푸터
 const footer = document.querySelector("footer");
 footer.innerHTML = `<div class="container">
@@ -127,8 +98,8 @@ footer.innerHTML = `<div class="container">
                 <span>회사소개</span>
                 <ul>
                     <li><a href="/introduce/message/"><span>인사말</span></a></li>
-                    <li><a href="/introduce/business/"><span>사업분야</span></a></li>
                     <li><a href="/introduce/roadmap/"><span>연혁</span></a></li>
+                    <li><a href="/introduce/business/"><span>사업분야</span></a></li>
                     <li><a href="/introduce/certification/"><span>인증서</span></a></li>
                     <li><a href="/introduce/facility/"><span>보유설비</span></a></li>
                     <li><a href="/introduce/location/"><span>오시는길</span></a></li>
@@ -147,7 +118,7 @@ footer.innerHTML = `<div class="container">
                 <ul>
                     <li><a href="/film/opp/"><span>OPP 필름</span></a></li>
                     <li><a href="/film/valeron/"><span>발레론 필름</span></a></li>
-                    <li><a href="/film/TPU 필름/"><span>TPU 필름</span></a></li>
+                    <li><a href="/film/tpu/"><span>TPU 필름</span></a></li>
                     <li><a href="/film/ppf/"><span>PPF 필름</span></a></li>
                     <li><a href="/film/pet/"><span>PET 필름</span></a></li>
                 </ul>
@@ -274,8 +245,8 @@ const filmBannerUl = document.querySelector(".film_banner_ul")
 
 introduceBannerUl.innerHTML = `
 <li class="introduce_message"><a href="/introduce/message/"><span>인사말</span></a></li>
-<li class="introduce_business"><a href="/introduce/business/"><span>사업분야</span></a></li>
 <li class="introduce_roadmap"><a href="/introduce/roadmap/"><span>연혁</span></a></li>
+<li class="introduce_business"><a href="/introduce/business/"><span>사업분야</span></a></li>
 <li class="introduce_certification"><a href="/introduce/certification/"><span>인증서</span></a></li>
 <li class="introduce_facility"><a href="/introduce/facility/"><span>보유설비</span></a></li>
 <li class="introduce_location"><a href="/introduce/location/"><span>오시는길</span></a></li>
@@ -293,11 +264,6 @@ filmBannerUl.innerHTML = `
     <li class="film_ppf"><a href="/film/ppf/"><span>PPF 필름</span></a></li>
     <li class="film_pet"><a href="/film/pet/"><span>PET 필름</span></a></li>
 `;
-
-const lang = document.querySelector(".lang");
-lang.addEventListener("click", () => {
-  lang.classList.toggle("active");
-});
 
 // 리모컨
 const remocon = document.createElement("div");

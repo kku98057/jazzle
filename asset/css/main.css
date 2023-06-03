@@ -314,8 +314,8 @@
   width: 11.5px;
   transition: all 0.3s;
 }
-.askBtns_icon path {
-  stroke: var(--color-card-subText);
+.askBtns_icon svg path {
+  stroke: #000000;
 }
 .ask_content.active .askBtn {
   background-color: var(--color-contents-title);
@@ -355,16 +355,14 @@
 /* custom */
 .custom_slider {
   overflow: hidden;
-
-  max-width: 1111px;
+  max-width: 953px;
   margin: 0 auto;
+  overflow: hidden;
 }
 .custom_slide {
   overflow: hidden;
   position: relative;
   height: 68px;
-  padding: 0 197px;
-  margin: 0 auto;
 }
 .custom_slide .swiper-wrapper {
   align-items: center;
@@ -372,6 +370,9 @@
 .custom_slide .swiper-slide-active img {
   transform: scale(1.5);
   filter: grayscale(0);
+}
+.customSlide {
+  width: 123px;
 }
 .customSlide img {
   filter: grayscale(1);

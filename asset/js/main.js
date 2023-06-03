@@ -3,9 +3,9 @@ const swiper2 = new Swiper(".custom_slide", {
   slidesPerView: 5,
   loop: true,
   centeredSlides: true,
-  spaceBetween: 67,
+  spaceBetween: 65,
   autoplay: {
-    delay: 1000,
+    delay: 3000,
   },
 });
 

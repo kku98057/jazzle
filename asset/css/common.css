@@ -7,12 +7,12 @@
   --font-middle: 24px;
   --font-middle2: 22px;
   --font-small: 18px;
-  --font-xsmall: 16px;
+  --font-xsmall: 20px;
 
   --color-contents-title: #000000;
   --color-contents-subtext: #000000;
   --color-card-subText: #8d8ba7;
-  --color-qna-bg: #f2f1fa;
+  --color-qna-bg: #e2e2e2;
 
   --color-result-subText: #bcbacd;
   --color-border: #d4d2e3;
@@ -82,7 +82,29 @@ header {
   width: 120px;
   position: relative;
 }
+.sub_menu {
+  width: 100%;
+  height: 0;
+  border-top: solid 1px #dddddd;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  z-index: 11;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+header:hover ~ .sub_menu {
+  height: auto;
+}
+.sub_menu:hover {
+  height: auto;
+}
+.sub_menu_wrap {
+  display: flex;
 
+  justify-content: center;
+  width: 100%;
+}
 .nav {
   height: 100%;
   display: flex;
@@ -118,29 +140,52 @@ header {
   font-size: var(--font-small);
 }
 .nav_sub {
-  width: 150%;
-  top: 80px;
-  position: absolute;
-  overflow: hidden;
-  height: 0;
+  border-right: solid 1px #dddddd;
   background-color: #ffffff;
+  padding: 25px calc(25px * 1.8);
   box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0);
+}
+.nav_sub:first-child {
+  border-left: solid 1px #dddddd;
 }
 .nav_sub li {
   display: flex;
   width: 100%;
   padding: 5px 0;
+  position: relative;
   align-items: center;
-  justify-content: center;
 }
-.nav_list:hover .nav_sub {
-  height: auto;
-  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3);
+.nav_sub li span {
+  position: relative;
+  padding-bottom: 5px;
+}
+.nav_sub li a span:after {
+  width: 0%;
+  height: 2px;
+  background-color: #767676;
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0px;
+  transition: all 0.3s;
+}
+.nav_sub li:first-child a span:after {
+  display: none;
+}
+.nav_sub li a span:hover:after {
+  width: 100%;
+}
+.nav_sub_title {
+  font-weight: 500;
 }
 .nav_sub a {
+  font-size: 14px;
   font-weight: 400;
+
+  color: var(--color-card-subText);
 }
 .nav_btns {
+  width: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -148,46 +193,17 @@ header {
 }
 .lang {
   position: relative;
-}
-.lang_ul {
-  position: absolute;
-  clip-path: inset(0 0 100% 0);
-  overflow: hidden;
-  top: 30px;
-  transition: all 0.3s;
-  transform-origin: top;
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.lang.active .lang_ul {
-  clip-path: inset(0 0 0 0);
-}
-.lang_arrow_img {
-  transition: all 0.3s;
-  transform: rotate(-90deg);
-}
-.lang.active .lang_arrow_img {
-  transform: rotate(0deg);
-}
-.lang_now {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 5px;
 }
-.flag_img {
-  width: 25px;
+.lang li a {
+  font-size: 14px;
+  color: #757577;
 }
-.na {
-  transform: rotate(90deg);
-  font-size: 25px;
-}
-.nav_btns > a span {
-  font-weight: 400;
-  color: var(--color-main);
-  font-size: var(--font-small);
+.lang li.active a {
+  color: #000000;
+  font-weight: 500;
+  font-size: 16px;
 }
 /* footer */
 footer {
@@ -203,7 +219,7 @@ footer {
 .footer_top {
   width: 100%;
   display: flex;
-  gap: 107px;
+  justify-content: space-between;
 }
 .footerLogo {
   width: 120px;
@@ -255,8 +271,9 @@ footer {
 .right {
   flex: 1;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: flex-start;
+  gap: 12.8%;
 }
 .footer_nav > span {
   color: var(--color-contents-title);
@@ -275,7 +292,9 @@ footer {
   color: var(--color-contents-subtext);
   font-weight: 400;
 }
-
+.footer_nav a .nav_sub_text {
+  font-size: 14px;
+}
 .footer_sns li a {
   display: flex;
   align-items: center;
@@ -466,17 +485,20 @@ footer {
 .content_text h4 {
   font-weight: 700;
   margin-bottom: 20px;
-  font-size: 20px;
+  font-size: 24px;
+}
+.content_text ul li {
+  list-style: disc;
 }
 .content_text p {
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .content_text ul span {
-  font-weight: 300;
-  font-size: 16px;
+  font-weight: 400;
+  font-size: 20px;
   text-align: center;
   white-space: nowrap;
 }

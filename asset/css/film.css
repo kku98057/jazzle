@@ -1,5 +1,5 @@
 .opp_intro_wrap {
-  max-width: 906px;
+  max-width: 1006px;
   width: 100%;
   margin: 0 auto;
 }
@@ -182,4 +182,21 @@
 .ppf_structure .content:last-child li span {
   font-weight: 500;
   font-size: var(--font-xsmall);
+}
+
+.tpu_intro_wrap {
+  max-width: 1006px;
+  width: 100%;
+  margin: 0 auto;
+}
+.tpu_intro_img {
+  width: 50%;
+  height: 382px;
+  background-color: gray;
+}
+.tpu_intro_wrap .content_text {
+  width: 50%;
+}
+.tpu_intro_wrap .content:not(:last-of-type) {
+  margin-bottom: 193px;
 }
