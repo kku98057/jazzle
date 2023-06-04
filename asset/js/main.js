@@ -15,3 +15,4 @@ askContents.forEach((askContent) => {
     askContent.classList.toggle("active");
   });
 });
+

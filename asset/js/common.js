@@ -143,7 +143,7 @@ footer.innerHTML = `<div class="container">
                         </a>
                     </li>
                     <li class="sns_linkedIn">
-                        <a href="">
+                        <a href="https://www.linkedin.com/company/jazzle-enterprise/" target="_blank" rel="noreferer nofollow">
                             <div class="sns_img">
                                 <img src="/asset/imgs/sns/LinkedIn.png" alt="linkedIn">
                             </div>
@@ -318,3 +318,10 @@ if (progressBar) {
     progressBar.style.width = `${(bodyHeight / scrollHeight) * 100}%`;
   });
 }
+
+// loading
+const loading = document.querySelector('.loading')
+gsap.to('.loading',{
+    delay:0.5,
+    opacity:0
+})
