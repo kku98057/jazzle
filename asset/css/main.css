@@ -102,8 +102,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
-
+  gap: 10px;
 }
 .business_content_data {
   padding: 36px 20px;
@@ -362,9 +361,7 @@
   overflow: hidden;
 }
 .custom_slide {
-
   position: relative;
- 
 }
 .custom_slide .swiper-wrapper {
   align-items: center;
@@ -374,7 +371,7 @@
   filter: grayscale(0);
 }
 .customSlide {
-  width: 208px
+  width: 208px;
 }
 .customSlide img {
   filter: grayscale(1);
