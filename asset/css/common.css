@@ -15,7 +15,7 @@
   --color-qna-bg: #e2e2e2;
 
   --color-result-subText: #bcbacd;
-  --color-border: #767676;
+  --color-border: #7676766b;
   --color-main: #f96c0d;
   --color-blue: #005983;
 }
@@ -197,13 +197,13 @@ header:hover ~ .sub_menu {
   gap: 5px;
 }
 .lang li a {
-  font-size: 14px;
   color: #757577;
+  font-size: 16px;
 }
 .lang li.active a {
   color: #000000;
+
   font-weight: 500;
-  font-size: 16px;
 }
 /* footer */
 footer {

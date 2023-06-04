@@ -32,8 +32,13 @@
 }
 .pvoh_content2 {
   margin-top: 67px;
-  aspect-ratio: 1000/382;
+  aspect-ratio: 1280/720;
   background-color: gray;
+  margin-bottom: 20px;
+}
+.pvoh_content2 iframe {
+  width: 100%;
+  height: 100%;
 }
 .pvoh_product_contents {
   display: flex;
