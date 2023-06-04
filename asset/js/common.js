@@ -320,8 +320,10 @@ if (progressBar) {
 }
 
 // loading
-const loading = document.querySelector('.loading')
-gsap.to('.loading',{
-    delay:0.5,
-    opacity:0
-})
+
+if (document.querySelector(".loading")) {
+  gsap.to(".loading", {
+    delay: 0.5,
+    opacity: 0,
+  });
+}
