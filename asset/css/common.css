@@ -201,7 +201,7 @@ header:hover ~ .sub_menu {
   font-size: 14px;
   font-weight: 400;
 
-  color: var(--color-card-subText);
+  color: #757575;
 }
 .nav_btns {
   width: 120px;
