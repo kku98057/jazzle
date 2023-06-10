@@ -115,11 +115,11 @@ header {
 }
 header:hover ~ .sub_menu {
   height: auto;
-
   border-bottom: solid 1px #dddddd;
 }
 .sub_menu:hover {
   height: auto;
+  border-bottom: solid 1px #dddddd;
 }
 .sub_menu_wrap {
   display: flex;
