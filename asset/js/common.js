@@ -57,7 +57,7 @@ div.innerHTML = `
     <li><a href="/introduce/message/"><span>인사말</span></a></li>
     <li><a href="/introduce/roadmap/"><span>연혁</span></a></li>
     <li><a href="/introduce/business/"><span>사업분야</span></a></li>
-    <li><a href="/introduce/certification/"><span>인증서</span></a></li>
+    <li><a href="/introduce/certification/"><span>인증현황</span></a></li>
     <li><a href="/introduce/facility/"><span>보유설비</span></a></li>
     <li><a href="/introduce/location/"><span>오시는길</span></a></li>
 </ul>
@@ -131,7 +131,7 @@ footer.innerHTML = `       <div class="container">
                     <li><a href="/introduce/message/"><span>인사말</span></a></li>
                     <li><a href="/introduce/roadmap/"><span>연혁</span></a></li>
                     <li><a href="/introduce/business/"><span>사업분야</span></a></li>
-                    <li><a href="/introduce/certification/"><span>인증서</span></a></li>
+                    <li><a href="/introduce/certification/"><span>인증현황</span></a></li>
                     <li><a href="/introduce/facility/"><span>보유설비</span></a></li>
                     <li><a href="/introduce/location/"><span>오시는길</span></a></li>
                 </ul>
@@ -255,7 +255,7 @@ introduceBannerUl.innerHTML = `
 <li class="introduce_message"><a href="/introduce/message/"><span>인사말</span></a></li>
 <li class="introduce_roadmap"><a href="/introduce/roadmap/"><span>연혁</span></a></li>
 <li class="introduce_business"><a href="/introduce/business/"><span>사업분야</span></a></li>
-<li class="introduce_certification"><a href="/introduce/certification/"><span>인증서</span></a></li>
+<li class="introduce_certification"><a href="/introduce/certification/"><span>인증현황</span></a></li>
 <li class="introduce_facility"><a href="/introduce/facility/"><span>보유설비</span></a></li>
 <li class="introduce_location"><a href="/introduce/location/"><span>오시는길</span></a></li>
 `;
@@ -328,7 +328,9 @@ if (progressBar) {
 }
 
 // contact us
-const contact = document.querySelector(".ask_help");
+const contact = document.querySelector(".ask_help")
+  ? document.querySelector(".ask_help")
+  : "";
 contact.innerHTML = `<div class="ask_help_contents">
 <h3>온라인 문의</h3>
 <a href="/cs" class="moreBtn"><span>Contact us</span></a>

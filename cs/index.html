@@ -11,7 +11,7 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
         (function () {
-            emailjs.init('OjZpnSGI_Vjx-MOg8');
+            emailjs.init('gSoc6luFUhPTcZZq7');
         })();
     </script>
 
@@ -50,17 +50,16 @@
                                 </div>
                                 <!-- etc -->
                                 <div class="contact_etc">
-                                    <span>기타</span>
+                                    <span>문의내용</span>
                                     <textarea rows="5" cols="5" name="message"
-                                        placeholder="기타문의 사항이 있다면 적어주세요."></textarea>
+                                        placeholder="문의내용이 있다면 적어주세요."></textarea>
                                 </div>
                                 <div class="contact_btn">
                                     <button type="submit"><span>보내기</span></button>
                                 </div>
                             </form>
                         </div>
-                        <div class="contact_left">
-                        </div>
+
                     </div>
                 </div>
             </section>
@@ -72,27 +71,19 @@
         const serviceBox = document.querySelector('.contact_service_box');
         const serviceList = [{
             id: 0,
-            value: '체크1'
-        }, {
+            value: '에코제품 견적'
+        },
+        {
             id: 1,
-            value: '체크2'
-        }, {
+            value: '필름제품 견적'
+        },
+        {
             id: 2,
-            value: '체크3'
-        }, {
+            value: '협력/제휴'
+        },
+        {
             id: 3,
-            value: '체크4'
-        }, {
-            id: 4,
-            value: 'dma'
-        },
-        {
-            id: 5,
-            value: '2342'
-        },
-        {
-            id: 6,
-            value: 'asdf'
+            value: '기타'
         }]
         serviceBox.innerHTML = serviceList.map((li) => `<label for="${li.id}" >
             <input type="checkbox" name="user_service" id="${li.id}" value="${li.value}">
@@ -120,7 +111,7 @@
                 event.preventDefault();
                 this.contact_number.value = Math.random() * 100000 | 0;
                 if (isChecked) {
-                    emailjs.sendForm('service_wwsdse1', 'template_iita9rc', this)
+                    emailjs.sendForm('service_44p97ho', 'template_if15vg9', this)
                         .then(function (e) {
                             alert('메일이 전송되었습니다.')
                         }, function (error) {
