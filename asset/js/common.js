@@ -20,14 +20,14 @@ header.innerHTML = `<div class="container">
             </li>
             <li class="nav_list">
                 <div class="nav_category">
-                    <span> 에코패키징 </span>
+                    <span> 에코사업부 </span>
                   
                 </div>
                 
             </li>
             <li class="nav_list">
                 <div class="nav_category">
-                    <span> 산업용필름 </span>
+                    <span> 필름사업부 </span>
                   
                 </div>
                
@@ -62,14 +62,14 @@ div.innerHTML = `
     <li><a href="/introduce/location/"><span>오시는길</span></a></li>
 </ul>
 <ul class="nav_sub">
-    <li class="nav_sub_title"><span>에코패키징</span></li>
+    <li class="nav_sub_title"><span>에코사업부</span></li>
     <li><a href="/eco/pvoh/"><span>PVOH</span></a></li>
-    <li><a href="/eco/bio/"><span>재즐 바이오 폴리머</span></a></li>
+    <li><a href="/eco/bio/"><span>바이오 폴리머</span></a></li>
     <li><a href="/eco/bope/"><span>BOPE/MDOPE</span></a></li>
 
 </ul>
 <ul class="nav_sub">
-    <li class="nav_sub_title"><span>산업용필름</span></li>
+    <li class="nav_sub_title"><span>필름사업부</span></li>
     <li><a href="/film/opp/"><span>OPP 필름</span></a></li>
     <li><a href="/film/valeron/"><span>발레론 필름</span></a></li>
     <li><a href="/film/tpu/"><span>TPU 필름</span></a></li>
@@ -80,16 +80,47 @@ div.innerHTML = `
 
 // 푸터
 const footer = document.querySelector("footer");
-footer.innerHTML = `<div class="container">
+footer.innerHTML = `       <div class="container">
 <div class="footer_wrap">
     <div class="footer_top">
         <div class="left">
             <div class="footerLogo">
                 <img src="/asset/imgs/icons/footer_logo.png" alt="footer_logo">
             </div>
+
+            <div class="footer_bottom">
+                <strong> 재즐엔터프라이즈(주)</strong>
+
+                <div class="info">
+                    <div class="info_list">
+                        <span>사업장주소</span>
+                        <span>서울 서대문구 백련사길 7(홍은동) 재즐빌딩 3층</span>
+                    </div>
+                    <div class="info_list">
+                        <span>대표자</span>
+
+                        <span>이유식</span>
+                    </div>
+                    <div class="info_list">
+                        <span>사업자등록번호</span>
+
+                        <span>105-86-33377</span>
+                    </div>
+                    <div class="info_list">
+                        <span>대표안내전화</span>
+                        <span>TEL : 02-322-9592 / FAX : 02-332-9598</span>
+
+                    </div>
+                    <div class="info_list">
+                        <span>개인정보책임관리자</span>
+                        <span>이경민 jazzle@jazzle.co.kr</span>
+
+                    </div>
+                </div>
+            </div>
             <div class="copyright">
-                <p>
-                    Copyright © 2023 Jazzle<br> Enterprise.
+                <p>Copyright © 2023 Jazzle Enterprise.
+
                 </p>
             </div>
         </div>
@@ -106,10 +137,10 @@ footer.innerHTML = `<div class="container">
                 </ul>
             </div>
             <div class="footer_nav">
-                <span>에코패키징</span>
+                <span>에코사업부</span>
                 <ul>
                     <li><a href="/eco/pvoh/"><span>PVOH</span></a></li>
-                    <li><a href="/eco/bio/"><span>재즐 바이오 폴리머</span></a></li>
+                    <li><a href="/eco/bio/"><span>바이오 폴리머</span></a></li>
                     <li><a href="/eco/bope/"><span>BOPE/MDOPE</span></a></li>
                 </ul>
             </div>
@@ -143,7 +174,8 @@ footer.innerHTML = `<div class="container">
                         </a>
                     </li>
                     <li class="sns_linkedIn">
-                        <a href="https://www.linkedin.com/company/jazzle-enterprise/" target="_blank" rel="noreferer nofollow">
+                        <a href="https://www.linkedin.com/company/jazzle-enterprise/" target="_blank"
+                            rel="noreferer nofollow">
                             <div class="sns_img">
                                 <img src="/asset/imgs/sns/LinkedIn.png" alt="linkedIn">
                             </div>
@@ -171,31 +203,7 @@ footer.innerHTML = `<div class="container">
             </div>
         </div>
     </div>
-    <div class="footer_bottom">
-        <strong> 재즐엔터프라이즈(주)</strong>
 
-        <div class="info">
-            <div class="info_list">
-                <span>사업장주소</span>
-                <span>서울 서대문구 백련사길 7(홍은동) 재즐빌딩 3층</span>
-            </div>
-            <div class="info_list">
-                <span>대표자</span>
-
-                <span>이유식</span>
-            </div>
-            <div class="info_list">
-                <span>사업자등록번호</span>
-
-                <span>105-86-33377</span>
-            </div>
-            <div class="info_list">
-                <span>대표안내전화</span>
-                <span>TEL : 02-322-9592</span>
-                <span>FAX : 02-332-9598</span>
-            </div>
-        </div>
-    </div>
 </div>
 </div>`;
 
@@ -253,7 +261,7 @@ introduceBannerUl.innerHTML = `
 `;
 ecoBannerUl.innerHTML = `
  <li class="eco_pvoh"><a href="/eco/pvoh/"><span>PVOH</span></a></li>
-<li class="eco_bio"><a href="/eco/bio/"><span>재즐 바이오 폴리머</span></a></li>
+<li class="eco_bio"><a href="/eco/bio/"><span>바이오 폴리머</span></a></li>
 <li class="eco_bope"><a href="/eco/bope/"><span>BOPE/MDOPE</span></a></li>
 
 `;
@@ -318,6 +326,13 @@ if (progressBar) {
     progressBar.style.width = `${(bodyHeight / scrollHeight) * 100}%`;
   });
 }
+
+// contact us
+const contact = document.querySelector(".ask_help");
+contact.innerHTML = `<div class="ask_help_contents">
+<h3>온라인 문의</h3>
+<a href="/cs" class="moreBtn"><span>Contact us</span></a>
+</div>`;
 
 // loading
 

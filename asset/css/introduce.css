@@ -55,6 +55,9 @@
 .business {
   padding-bottom: 332px;
 }
+.business .container {
+  max-width: 1200px;
+}
 .businiess_contents {
   display: flex;
   align-items: center;
@@ -79,7 +82,7 @@
 .business_list .img {
   width: 130px;
   height: 130px;
-  background-color: #d9d9d9;
+
   border-radius: 50%;
   overflow: hidden;
 }
@@ -159,12 +162,16 @@
   align-items: center;
   gap: 28px;
 }
-.certification_content span {
+.certification_content > span {
   font-weight: 700;
-  font-size: var(--font-middle);
+  font-size: 36px;
   color: var(--color-contents-title);
   white-space: nowrap;
   text-align: center;
+}
+.certification_content span > span {
+  font-size: 26px;
+  line-height: 1;
 }
 
 /* 보유설비 */
@@ -209,15 +216,14 @@
   display: inline-block;
   position: relative;
   overflow: hidden;
-  
 }
 
-.facility_hover{
+.facility_hover {
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
-  
+
   background-color: rgba(0, 0, 0, 0.596);
   display: flex;
   flex-direction: column;
@@ -227,16 +233,16 @@
   transition: all 0.3s;
   opacity: 0;
 }
-.facility_img:hover .facility_hover{
+.facility_img:hover .facility_hover {
   opacity: 1;
 }
-.facility_hover h4{
+.facility_hover h4 {
   font-size: 24px;
-  color:#ffffff;
+  color: #ffffff;
 }
-.facility_hover p{
+.facility_hover p {
   font-size: 16px;
-  color:#ffffff;
+  color: #ffffff;
 }
 /* */
 .facility_img_wrap_1.grid {
@@ -300,8 +306,14 @@
 }
 
 /* 오시는길 */
+.location_contents_wrap {
+  display: flex;
+  width: 100%;
+  gap: 54px;
+}
 .location_contents {
   margin-bottom: 80px;
+  width: 100%;
 }
 .location_contents span {
   display: inline-block;
@@ -309,4 +321,24 @@
   font-weight: 500;
   font-size: 20px;
   color: var(--color-contents-title);
+}
+.location_contents_title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.location_contents_wrap .location_contents_title {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+#map {
+  width: 100%;
+}
+#map2 {
+  width: 100%;
+}
+#map3 {
+  width: 100%;
 }

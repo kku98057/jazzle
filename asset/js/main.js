@@ -1,4 +1,15 @@
-const swiper = new Swiper(".keyvisual_wrap", {});
+const swiper = new Swiper(".keyvisual_wrap", {
+  navigation: {
+    nextEl: ".keyvisual_arrows-next",
+    prevEl: ".keyvisual_arrows-prev",
+  },
+
+  autoplay: {
+    delay: 3000,
+  },
+  loop: true,
+  speed: 1000,
+});
 const swiper2 = new Swiper(".custom_slide", {
   slidesPerView: 5,
   loop: true,
@@ -6,6 +17,10 @@ const swiper2 = new Swiper(".custom_slide", {
   spaceBetween: 65,
   autoplay: {
     delay: 3000,
+  },
+  navigation: {
+    nextEl: ".next",
+    prevEl: ".prev",
   },
 });
 
@@ -15,4 +30,3 @@ askContents.forEach((askContent) => {
     askContent.classList.toggle("active");
   });
 });
-
