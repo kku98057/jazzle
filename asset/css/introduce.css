@@ -1,9 +1,7 @@
 .introduce_title {
   margin-bottom: 90px;
 }
-.message {
-  padding-bottom: 332px;
-}
+
 .message .container {
   max-width: calc(1419px + 96px);
 }

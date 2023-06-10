@@ -15,7 +15,7 @@
 }
 .pvho_imgs_img {
   flex: 1;
-  background-color: gray;
+
   aspect-ratio: 493/382;
 }
 .pvoh_text {
@@ -33,7 +33,7 @@
 .pvoh_content2 {
   margin-top: 67px;
   aspect-ratio: 1280/720;
-  background-color: gray;
+
   margin-bottom: 20px;
 }
 .pvoh_content2 iframe {
@@ -120,7 +120,6 @@
 .pvoh_grid_img {
   width: 100%;
   aspect-ratio: 1/1;
-  background-color: gray;
 }
 .pvoh_application_text_wrap {
   margin-bottom: 33px;
@@ -229,7 +228,6 @@
 .bio_intro_img {
   width: 493px;
   height: 382px;
-  background-color: gray;
 }
 .bio_char .contents {
   display: flex;
@@ -273,7 +271,7 @@
 }
 .bio_application_img {
   height: 382px;
-  background-color: gray;
+
   aspect-ratio: 493/382;
   border: 1px solid #76767673;
 }
@@ -291,7 +289,6 @@
 .bio_current_img {
   height: 450px;
   aspect-ratio: 1/1;
-  background-color: gray;
 }
 .bio_current .content_text li:not(:last-of-type) {
   margin-bottom: 30px;

@@ -3,10 +3,14 @@ const swiper = new Swiper(".keyvisual_wrap", {
     nextEl: ".keyvisual_arrows-next",
     prevEl: ".keyvisual_arrows-prev",
   },
-
-  autoplay: {
-    delay: 3000,
+  pagination: {
+    el: ".keyvisual_pagination",
+    type: "bullets",
   },
+  // autoplay: {
+  //   delay: 10000,
+  //   disableOnInteraction: false,
+  // },
   loop: true,
   speed: 1000,
 });
