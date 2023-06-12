@@ -143,6 +143,9 @@
   white-space: nowrap;
   color: var(--color-contents-title);
 }
+.roadmap_content span:nth-child(1) {
+  width: 86px;
+}
 
 /* 인증 */
 

@@ -7,10 +7,9 @@ const swiper = new Swiper(".keyvisual_wrap", {
     el: ".keyvisual_pagination",
     type: "bullets",
   },
-  // autoplay: {
-  //   delay: 10000,
-  //   disableOnInteraction: false,
-  // },
+  autoplay: {
+    delay: 10000,
+  },
   loop: true,
   speed: 1000,
 });

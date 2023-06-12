@@ -45,11 +45,19 @@ header.innerHTML = `<div class="container">
                 }><a href="">EN</a></li>
             </ul>
         </div>
+        <div class="mob_btn">
+            <div class="mob_btn-bar mob_btn-bar1"></div>
+            <div class="mob_btn-bar mob_btn-bar2"></div>
+            <div class="mob_btn-bar mob_btn-bar3"></div>
+        </div>
 </div>
 </div>`;
 const div = document.createElement("div");
+const mobMenu = document.createElement("div");
+mobMenu.className = "mob_menu";
 div.className = "sub_menu";
 wrap.append(div);
+wrap.append(mobMenu);
 div.innerHTML = `
 <div class="sub_menu_wrap">
 <ul class="nav_sub">
@@ -64,7 +72,7 @@ div.innerHTML = `
 <ul class="nav_sub">
     <li class="nav_sub_title"><span>에코사업부</span></li>
     <li><a href="/eco/pvoh/"><span>PVOH</span></a></li>
-    <li><a href="/eco/bio/"><span>바이오 폴리머</span></a></li>
+    <li><a href="/eco/bio/"><span>바이오폴리머</span></a></li>
     <li><a href="/eco/bope/"><span>BOPE/MDOPE</span></a></li>
 
 </ul>
@@ -77,7 +85,56 @@ div.innerHTML = `
     <li><a href="/film/pet/"><span>PET 필름</span></a></li>
 </ul>
 </div>`;
-
+mobMenu.innerHTML = `  <div class="mob_menu_wrap">
+<ul>
+    <li class="nav_list" data-mob-list="0">
+        <div class="nav_category">
+            <span> 에코사업부 </span>
+        </div>
+        <ul data-mob_nav="0">
+            <li><a href="/eco/pvoh/"><span>PVOH</span></a></li>
+            <li><a href="/eco/bio/"><span>바이오폴리머</span></a></li>
+            <li><a href="/eco/bope/"><span>BOPE/MDOPE</span></a></li>
+        </ul>
+    </li>
+    <li class="nav_list" data-mob-list="1">
+        <div class="nav_category">
+            <span> 필름사업부 </span>
+        </div>
+        <ul data-mob_nav="1">
+            <li><a href="/film/opp/"><span>OPP 필름</span></a></li>
+            <li><a href="/film/valeron/"><span>발레론 필름</span></a></li>
+            <li><a href="/film/tpu/"><span>TPU 필름</span></a></li>
+            <li><a href="/film/ppf/"><span>PPF 필름</span></a></li>
+            <li><a href="/film/pet/"><span>PET 필름</span></a></li>
+        </ul>
+    </li>
+    <li class="nav_list" data-mob-list="2">
+        <div class="nav_category">
+            <span> 회사소개 </span>
+        </div>
+        <ul data-mob_nav="2">
+            <li class="nav_sub_title"><span>회사소개</span></li>
+            <li><a href="/introduce/message/"><span>인사말</span></a></li>
+            <li><a href="/introduce/roadmap/"><span>연혁</span></a></li>
+            <li><a href="/introduce/business/"><span>사업분야</span></a></li>
+            <li><a href="/introduce/certification/"><span>인증현황</span></a></li>
+            <li><a href="/introduce/facility/"><span>보유설비</span></a></li>
+            <li><a href="/introduce/location/"><span>오시는길</span></a></li>
+        </ul>
+    </li>
+</ul>
+<div class="nav_btns">
+<ul class="lang">
+<li class=${
+  document.documentElement.lang === "ko" && "active"
+}><a href="">KO</a></li>
+<li  class=${
+  document.documentElement.lang === "en" && "active"
+}><a href="">EN</a></li>
+</ul>
+</div>
+</div>`;
 // 푸터
 const footer = document.querySelector("footer");
 footer.innerHTML = `       <div class="container">
@@ -140,7 +197,7 @@ footer.innerHTML = `       <div class="container">
                 <span>에코사업부</span>
                 <ul>
                     <li><a href="/eco/pvoh/"><span>PVOH</span></a></li>
-                    <li><a href="/eco/bio/"><span>바이오 폴리머</span></a></li>
+                    <li><a href="/eco/bio/"><span>바이오폴리머</span></a></li>
                     <li><a href="/eco/bope/"><span>BOPE/MDOPE</span></a></li>
                 </ul>
             </div>
@@ -261,7 +318,7 @@ introduceBannerUl.innerHTML = `
 `;
 ecoBannerUl.innerHTML = `
  <li class="eco_pvoh"><a href="/eco/pvoh/"><span>PVOH</span></a></li>
-<li class="eco_bio"><a href="/eco/bio/"><span>바이오 폴리머</span></a></li>
+<li class="eco_bio"><a href="/eco/bio/"><span>바이오폴리머</span></a></li>
 <li class="eco_bope"><a href="/eco/bope/"><span>BOPE/MDOPE</span></a></li>
 
 `;
@@ -293,6 +350,7 @@ remocon.innerHTML = `
 </a>
 </div>
 `;
+
 wrap.append(remocon);
 const topBtn = document.querySelector(".top_btn");
 topBtn.addEventListener("click", () => {
@@ -344,3 +402,24 @@ if (document.querySelector(".loading")) {
     opacity: 0,
   });
 }
+
+// header
+
+const mobBtn = document.querySelector(".mob_btn");
+const mobBar = document.querySelectorAll(".mob_btn-bar");
+
+const mobLists = document.querySelectorAll(".mob_menu .nav_list");
+mobBtn.addEventListener("click", () => {
+  mobBar.forEach((bar) => {
+    bar.classList.toggle("active");
+  });
+  mobMenu.classList.toggle("active");
+});
+mobLists.forEach((mobList) => {
+  mobList.addEventListener("click", () => {
+    const list = mobList.querySelector("ul");
+    mobList.classList.toggle("active");
+  });
+});
+
+console.log(mobLists);
