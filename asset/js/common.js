@@ -72,8 +72,8 @@ div.innerHTML = `
 <ul class="nav_sub">
     <li class="nav_sub_title"><span>에코사업부</span></li>
     <li><a href="/eco/pvoh/"><span>PVOH</span></a></li>
-    <li><a href="/eco/bio/"><span>바이오폴리머</span></a></li>
-    <li><a href="/eco/bope/"><span>BOPE/MDOPE</span></a></li>
+    <li><a href="/eco/bio/"><span>재즐 바이오폴리머</span></a></li>
+    <li><a href="/eco/bope/"><span>BOPE / MDOPE</span></a></li>
 
 </ul>
 <ul class="nav_sub">
@@ -93,8 +93,8 @@ mobMenu.innerHTML = `  <div class="mob_menu_wrap">
         </div>
         <ul data-mob_nav="0">
             <li><a href="/eco/pvoh/"><span>PVOH</span></a></li>
-            <li><a href="/eco/bio/"><span>바이오폴리머</span></a></li>
-            <li><a href="/eco/bope/"><span>BOPE/MDOPE</span></a></li>
+            <li><a href="/eco/bio/"><span>재즐 바이오폴리머</span></a></li>
+            <li><a href="/eco/bope/"><span>BOPE / MDOPE</span></a></li>
         </ul>
     </li>
     <li class="nav_list" data-mob-list="1">
@@ -197,8 +197,8 @@ footer.innerHTML = `       <div class="container">
                 <span>에코사업부</span>
                 <ul>
                     <li><a href="/eco/pvoh/"><span>PVOH</span></a></li>
-                    <li><a href="/eco/bio/"><span>바이오폴리머</span></a></li>
-                    <li><a href="/eco/bope/"><span>BOPE/MDOPE</span></a></li>
+                    <li><a href="/eco/bio/"><span>재즐 바이오폴리머</span></a></li>
+                    <li><a href="/eco/bope/"><span>BOPE / MDOPE</span></a></li>
                 </ul>
             </div>
             <div class="footer_nav">
@@ -318,8 +318,8 @@ introduceBannerUl.innerHTML = `
 `;
 ecoBannerUl.innerHTML = `
  <li class="eco_pvoh"><a href="/eco/pvoh/"><span>PVOH</span></a></li>
-<li class="eco_bio"><a href="/eco/bio/"><span>바이오폴리머</span></a></li>
-<li class="eco_bope"><a href="/eco/bope/"><span>BOPE/MDOPE</span></a></li>
+<li class="eco_bio"><a href="/eco/bio/"><span>재즐 바이오폴리머</span></a></li>
+<li class="eco_bope"><a href="/eco/bope/"><span>BOPE / MDOPE</span></a></li>
 
 `;
 filmBannerUl.innerHTML = `
