@@ -336,15 +336,15 @@ remocon.className = "remocon";
 remocon.innerHTML = `
 <div class="remocon_wrap">
 <div class="remocon_btn top_btn">
-    <img src="/asset/imgs/icons/arrow.png" alt="top" />
+    <img src="/asset/imgs/icons/arrow-white.png" alt="top" />
 </div>
 <a href="/cs/" class="remocon_btn contact_btn">
     <img src="/asset/imgs/icons/contact.png" alt="contact" />
     <div class="contact_text">
-        <p>무엇이든 물어보세요.</p>
+        <p>상담 가능 시간</p>
         <div>
-            <img src="/asset/imgs/icons/warning.png" alt="contact_icon" />
-            <p>월요일 11:00부터 상담 가능</p>
+            <span>평일 09:00 - 17:00</span>
+            <p>(점심 12:00 - 13:00)</p>
         </div>
     </div>
 </a>

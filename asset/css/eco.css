@@ -209,6 +209,7 @@
 
 .current_img {
   width: 100%;
+  border: 0.5px solid #76767660;
 }
 .bope_current .content_text_wrap {
   display: flex;
